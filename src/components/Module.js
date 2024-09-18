@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
-import modules from '../data/lessons'
+import modules from "../data/lessons";
 
 const StyledLesson = styled.div`
   padding: 20px;
@@ -44,15 +44,9 @@ const BlockedButton = styled(Link)`
 `;
 
 const Module = ({ index, title, content, blocked, lessons }) => {
+  const progress = parseInt(localStorage.getItem("progress")) || 0;
 
-  
-
-  const progress = parseInt(localStorage.getItem('progress')) || 0
-
-  const currentLesson = (progress * modules[index].lessons.length) / 100
-  useEffect(() =>{
-    console.log(progress * modules[index].lessons.length)
-  }, [])
+  const currentLesson = (progress * modules[index].lessons.length) / 100;
 
   return (
     <StyledLesson>
@@ -64,7 +58,12 @@ const Module = ({ index, title, content, blocked, lessons }) => {
         })}
       </ul>
       {!blocked ? (
-        <AvailableButton to={`/module/${index}/lesson/${progress == 100 ? currentLesson: currentLesson+1}`}>Go to lesson</AvailableButton>
+        <AvailableButton
+          to={`/module/${index}/lesson/${
+            progress === 100 ? currentLesson : currentLesson + 1
+          }`}>
+          Go to lesson
+        </AvailableButton>
       ) : (
         <BlockedButton>Blocked</BlockedButton>
       )}
