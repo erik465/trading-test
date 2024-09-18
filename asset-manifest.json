@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/erik465/trading-test/static/css/main.07335e0a.css",
+    "main.js": "/erik465/trading-test/static/js/main.bd18d315.js",
+    "index.html": "/erik465/trading-test/index.html",
+    "main.07335e0a.css.map": "/erik465/trading-test/static/css/main.07335e0a.css.map",
+    "main.bd18d315.js.map": "/erik465/trading-test/static/js/main.bd18d315.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07335e0a.css",
+    "static/js/main.bd18d315.js"
+  ]
+}
