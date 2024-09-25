@@ -84,7 +84,10 @@ const Lesson = () => {
             onClick={() => {
               calcProgress();
               navigate(`/module/${id}/lesson/${parseInt(lessonId) + 1}`);
-
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
               setCurrentPage(0);
             }}>
             Next Lesson
