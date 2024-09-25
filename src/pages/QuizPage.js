@@ -1,20 +1,10 @@
 import React from "react";
 import Quiz from "../components/Quiz";
 import quizzes from "../data/quizzes";
+import { useParams } from "react-router-dom";
 
 const QuizPage = () => {
-  return (
-    <div>
-      {quizzes.map((quiz, index) => (
-        <Quiz
-          key={index}
-          question={quiz.question}
-          options={quiz.options}
-          correctAnswer={quiz.correctAnswer}
-        />
-      ))}
-    </div>
-  );
+  return <div></div>;
 };
 
 export default QuizPage;

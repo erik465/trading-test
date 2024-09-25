@@ -19,7 +19,6 @@ function App() {
             <Route path="/module/:id/quiz" element={<QuizPage />} />
             <Route path="/module/:id/lesson/:lessonId" element={<Lesson />} />
           </Route>
-          ¡{" "}
         </Routes>
       </div>
     </Router>
